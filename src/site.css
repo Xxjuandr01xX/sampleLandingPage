@@ -1,0 +1,59 @@
+/**
+ colores
+ Azul : #0782cf
+*/
+.nav-link:hover{
+    border-bottom: 1px solid #0782cf;
+    transition: all ease;
+    background-color: aliceblue;
+}
+
+.bg-geometry{
+    background-image: url('../public/img/headerbg.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.section-scrolling{
+    view-timeline-name: '--section';
+    view-timeline-axis: block;
+
+    animation-timeline: --section;
+    animetion-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
+
+
+@media (min-width: 800px){
+    .display-start{
+        display: none;
+    }
+    .display-end{
+        display: block;
+    }
+}
+
+@media (max-width: 780px){
+    .display-start{
+        display: block;
+    }
+    .display-end{
+        display: none;
+    }
+}
+
